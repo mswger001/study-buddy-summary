@@ -1,0 +1,26 @@
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+.tile-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tile {
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px;
+  width: 250px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.tile:hover {
+  transform: scale(1.05);
+  background-color: #e0e0e0;
+}
