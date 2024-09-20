@@ -15,14 +15,10 @@ const projects = [
         "Generate a new 7-question quiz based on the user's mistakes using an LLM.",
         "Provide instant feedback on each quiz answer.",
       ],
-      deliverables: [
-        "A functioning quiz feature.",
-        "A link to the hosted version or instructions to run the project locally.",
-        "Source code and documentation explaining design choices.",
-        "A short demo video of the system in use.",
-      ],
+      github: "https://github.com/mswger001/study-buddy",
+      hosted: "https://nyemwero-study-buddy.netlify.app/",
+      demo: "https://www.loom.com/share/aa2d266b5cac4afcadbaf6d3d31a9188",
     },
-    url: "https://nyemwero-study-buddy.netlify.app/",
   },
   {
     title: "Speech Buddy",
@@ -36,14 +32,10 @@ const projects = [
         "Integrate a speech-to-text API for real-time transcription.",
         "Offer feedback on pronunciation and fluency.",
       ],
-      deliverables: [
-        "A working project that allows users to speak and receive feedback.",
-        "A link to the hosted version or instructions to run the project locally.",
-        "Source code and documentation explaining the implementation.",
-        "A short demo video of the system in use.",
-      ],
+      github: "https://github.com/mswger001/speech-buddy",
+      hosted: "https://nyemwero-speech-buddy.netlify.app/",
+      demo: "https://www.loom.com/share/aa2d266b5cac4afcadbaf6d3d31a9188",
     },
-    url: "https://nyemwero-speech-buddy.netlify.app/",
   },
   {
     title: "Flashcard Buddy",
@@ -58,14 +50,10 @@ const projects = [
         "Implement a spaced repetition algorithm (optional).",
         "Track user progress through flashcards (optional).",
       ],
-      deliverables: [
-        "A working project that generates and displays flashcards.",
-        "A link to the hosted version or instructions to run the project locally.",
-        "Source code and documentation explaining the approach.",
-        "A short demo video of the system in use.",
-      ],
+      github: "https://github.com/mswger001/flashcard-buddy",
+      hosted: "https://nyemwero-flashcard-buddy.netlify.app/",
+      demo: "https://www.loom.com/share/aa2d266b5cac4afcadbaf6d3d31a9188",
     },
-    url: "https://nyemwero-flashcard-buddy.netlify.app/",
   },
 ];
 
@@ -75,11 +63,7 @@ function App() {
       <h1>Nyemwero Study Buddy Projects Summary</h1>
       <div className="tile-container">
         {projects.map((project, index) => (
-          <div
-            className="tile"
-            key={index}
-            onClick={() => window.open(project.url, "_blank")}
-          >
+          <div className="tile" key={index}>
             <h2>{project.title}</h2>
             <p>{project.description}</p>
             <div className="details">
@@ -96,12 +80,36 @@ function App() {
                 ))}
               </ul>
               <p>
-                <strong>Deliverables:</strong>
+                <strong>Links:</strong>
               </p>
               <ul>
-                {project.details.deliverables.map((deliv, j) => (
-                  <li key={j}>{deliv}</li>
-                ))}
+                <li>
+                  <a
+                    href={project.details.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub Repository
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={project.details.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Demo Video
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={project.details.hosted}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Hosted Project
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
